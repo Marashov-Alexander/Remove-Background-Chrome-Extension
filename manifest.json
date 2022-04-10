@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Remove Back",
   "description": "Remove background from selected image",
-  "version": "1.0.0",
+  "version": "1.3.0",
   
   "background": {
     "service_worker": "./src/background.js"
@@ -11,7 +11,9 @@
   "permissions": [
     "contextMenus",
     "identity", 
-    "identity.email"
+    "identity.email",
+    "activeTab",
+    "scripting"
   ],
 
   "host_permissions": [
@@ -22,5 +24,9 @@
       "16": "icons/back-16.png",
       "64": "icons/back-64.png",
       "128": "icons/back-128.png"
+  },
+
+  "action": {
+    "default_title": "Click to show all processed images"
   }
 }
